@@ -9,10 +9,10 @@ public class arraybinarysearch {
     public static Scanner key = new Scanner(System.in);// declaring scanner class globally
 
     public static void result(int flag, int choice){  //method to display reuslt according to condition
-        if(flag == 1 && choice == 1){
+        if(flag == 0 && choice == 1){
             System.out.println("The array binary search, \n The element Found at position: " + Arrays.binarySearch( arr3, item));
         }
-        else if(flag == 1 && choice == 2){
+        else if(flag == 0 && choice == 2){
             System.out.println("The array binary search, \n The element Found at position: " + Arrays.binarySearch(arr3, start, end, item));
         }
         else{
@@ -23,7 +23,7 @@ public class arraybinarysearch {
     public static int opt1(int item){  //binary search in array without range
         for(int i=0; i < arr3.length; i++) {
 
-            if(Arrays.binarySearch( arr3, item) != i){
+            if(Arrays.binarySearch( arr3, item) == i){
                flag = 0;
                break;
             }
